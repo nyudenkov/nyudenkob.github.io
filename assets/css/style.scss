@@ -23,6 +23,139 @@ body {
   max-width: none;
 }
 
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #e0e0e0;
+    background-color: #1a1a1a;
+  }
+  
+  /* Header */
+  .site-header {
+    border-bottom-color: #e0e0e0;
+  }
+  
+  .site-title a {
+    color: #e0e0e0;
+  }
+  
+  .site-title a:hover {
+    background-color: #333;
+  }
+  
+  /* Navigation */
+  .site-nav a {
+    color: #e0e0e0;
+  }
+  
+  .site-nav a:hover {
+    background-color: #333;
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    color: #e0e0e0;
+  }
+  
+  /* Links */
+  a {
+    color: #e0e0e0;
+  }
+  
+  a:hover {
+    background-color: #333;
+  }
+  
+  a:visited {
+    color: #b0b0b0;
+  }
+  
+  /* Code */
+  code {
+    background-color: #2a2a2a;
+    border-color: #444;
+  }
+  
+  pre {
+    background-color: #2a2a2a;
+    border-color: #444;
+  }
+  
+  /* Blockquotes */
+  blockquote {
+    border-left-color: #555;
+    color: #b0b0b0;
+  }
+  
+  /* Images */
+  img {
+    border-color: #555;
+  }
+  
+  /* Post List */
+  .post-list-item {
+    border-bottom-color: #333;
+  }
+  
+  .post-list-title a {
+    color: #e0e0e0;
+  }
+  
+  .post-list-title a:hover {
+    background-color: #333;
+  }
+  
+  .post-list-date {
+    color: #888;
+  }
+  
+  .post-list-excerpt {
+    color: #b0b0b0;
+  }
+  
+  /* Individual post */
+  .post-header {
+    border-bottom-color: #333;
+  }
+  
+  .post-date {
+    color: #888;
+  }
+  
+  /* Post navigation */
+  .post-footer {
+    border-top-color: #333;
+  }
+  
+  .prev-post,
+  .next-post {
+    color: #e0e0e0;
+  }
+  
+  .prev-post:hover,
+  .next-post:hover {
+    background-color: #333;
+  }
+  
+  /* Footer */
+  .site-footer {
+    border-top-color: #e0e0e0;
+    color: #888;
+  }
+  
+  /* No posts message */
+  .no-posts {
+    color: #888;
+  }
+  
+  /* Focus states */
+  a:focus,
+  .post-list-title a:focus {
+    outline-color: #e0e0e0;
+    background-color: #333;
+  }
+}
+
 /* Container - minimal, left-aligned */
 .container {
   max-width: 800px;
@@ -326,12 +459,12 @@ a:focus,
   }
 }
 
-/* Print styles */
+/* Print styles - force light mode for printing */
 @media print {
   body {
     margin: 0;
-    color: #000;
-    background: #fff;
+    color: #000 !important;
+    background: #fff !important;
   }
   
   .site-nav,
@@ -340,7 +473,32 @@ a:focus,
   }
   
   a {
-    color: #000;
+    color: #000 !important;
     text-decoration: underline;
+  }
+  
+  /* Override dark mode for print */
+  h1, h2, h3, h4, h5, h6 {
+    color: #000 !important;
+  }
+  
+  .post-list-title a,
+  .site-title a {
+    color: #000 !important;
+  }
+  
+  .post-list-date,
+  .post-date {
+    color: #666 !important;
+  }
+  
+  .post-list-excerpt {
+    color: #333 !important;
+  }
+  
+  code, pre {
+    background-color: #f5f5f5 !important;
+    border-color: #ddd !important;
+    color: #000 !important;
   }
 }
