@@ -23,73 +23,75 @@ body {
   max-width: none;
 }
 
-/* Dark mode */
+/* Dark mode - improved old internet aesthetic */
 @media (prefers-color-scheme: dark) {
   body {
-    color: #e0e0e0;
-    background-color: #1a1a1a;
+    color: #c9c9c9;
+    background-color: #0d1117;
   }
   
   /* Header */
   .site-header {
-    border-bottom-color: #e0e0e0;
+    border-bottom-color: #444;
   }
   
   .site-title a {
-    color: #e0e0e0;
+    color: #c9c9c9;
   }
   
   .site-title a:hover {
-    background-color: #333;
+    background-color: #222;
   }
   
   /* Navigation */
   .site-nav a {
-    color: #e0e0e0;
+    color: #c9c9c9;
   }
   
   .site-nav a:hover {
-    background-color: #333;
+    background-color: #222;
   }
   
   /* Typography */
   h1, h2, h3, h4, h5, h6 {
-    color: #e0e0e0;
+    color: #fff;
   }
   
   /* Links */
   a {
-    color: #e0e0e0;
+    color: #c9c9c9;
   }
   
   a:hover {
-    background-color: #333;
+    background-color: #222;
   }
   
   a:visited {
-    color: #b0b0b0;
+    color: #999;
   }
   
   /* Code */
   code {
-    background-color: #2a2a2a;
-    border-color: #444;
+    background-color: #111;
+    border-color: #333;
+    color: #c9c9c9;
   }
   
   pre {
-    background-color: #2a2a2a;
-    border-color: #444;
+    background-color: #111;
+    border-color: #333;
+    color: #c9c9c9;
   }
   
   /* Blockquotes */
   blockquote {
-    border-left-color: #555;
-    color: #b0b0b0;
+    border-left-color: #444;
+    color: #999;
   }
   
   /* Images */
   img {
-    border-color: #555;
+    border-color: #444;
   }
   
   /* Post List */
@@ -98,19 +100,19 @@ body {
   }
   
   .post-list-title a {
-    color: #e0e0e0;
+    color: #fff;
   }
   
   .post-list-title a:hover {
-    background-color: #333;
+    background-color: #222;
   }
   
   .post-list-date {
-    color: #888;
+    color: #777;
   }
   
   .post-list-excerpt {
-    color: #b0b0b0;
+    color: #999;
   }
   
   /* Individual post */
@@ -119,7 +121,7 @@ body {
   }
   
   .post-date {
-    color: #888;
+    color: #777;
   }
   
   /* Post navigation */
@@ -129,30 +131,30 @@ body {
   
   .prev-post,
   .next-post {
-    color: #e0e0e0;
+    color: #c9c9c9;
   }
   
   .prev-post:hover,
   .next-post:hover {
-    background-color: #333;
+    background-color: #222;
   }
   
   /* Footer */
   .site-footer {
-    border-top-color: #e0e0e0;
-    color: #888;
+    border-top-color: #444;
+    color: #777;
   }
   
   /* No posts message */
   .no-posts {
-    color: #888;
+    color: #777;
   }
   
   /* Focus states */
   a:focus,
   .post-list-title a:focus {
-    outline-color: #e0e0e0;
-    background-color: #333;
+    outline-color: #c9c9c9;
+    background-color: #222;
   }
 }
 
