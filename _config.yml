@@ -1,0 +1,50 @@
+# Jekyll Configuration for Minimal Blog
+title: "test"
+description: "testttt"
+author: "Nikita Iudenkov"
+email: "fmajesty@pm.me"
+url: "https://nyudenkob.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+
+# Jekyll plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude files from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+
+# Collections
+collections:
+  posts:
+    output: true
+
+# Pagination
+paginate: 10
+paginate_path: "/page:num/"
+
+# Sass
+sass:
+  style: compressed
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
