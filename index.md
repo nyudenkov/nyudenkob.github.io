@@ -5,20 +5,20 @@ title: Home
 
 # Recent Posts
 
-<div class="post-list">
+<ul class="post-list">
 {% for post in site.posts limit:10 %}
-  <div class="post-list-item">
-    <h2 class="post-list-title">
+  <li class="post-list-item">
+    <div class="post-list-title">
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    </h2>
-    <div class="post-list-date">{{ post.date | date: "%B %d, %Y" }}</div>
+    </div>
+    <div class="post-list-date">{{ post.date | date: "%Y-%m-%d" }}</div>
     {% if post.excerpt %}
-    <div class="post-list-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</div>
+    <div class="post-list-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</div>
     {% endif %}
-  </div>
+  </li>
 {% endfor %}
-</div>
+</ul>
 
 {% if site.posts.size == 0 %}
-<p>No posts yet.</p>
+<p class="no-posts">No posts yet.</p>
 {% endif %}
