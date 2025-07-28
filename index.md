@@ -12,8 +12,8 @@ title: Home
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </div>
     <div class="post-list-date">{{ post.date | date: "%Y-%m-%d" }}</div>
-    {% if post.excerpt %}
-    <div class="post-list-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</div>
+    {% if post.short %}
+    <div class="post-list-excerpt">{{ post.short | strip_html }}</div>
     {% endif %}
   </li>
 {% endfor %}
